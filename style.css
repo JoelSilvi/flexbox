@@ -1,0 +1,34 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: #333333;
+    height: 30vh;
+
+
+    
+    /* display: inline-flex; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    display: flex;
+    /* flex-direction: column-reverse; */
+    
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* shorcut de flexdirection y flex-wrap */
+    flex-flow: column wrap;
+
+}
+.item{
+    width: 20%;
+    height: 20%;
+    border: medium solid #999;
+    background-color: #666;
+}
