@@ -1,0 +1,41 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+.container{
+    height: 30vh;
+    width: 1000px;
+    background-color: green;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    
+    
+    /* margin-bottom: 15%; */
+}
+
+.item{
+    background-color: rebeccapurple;
+    border: medium solid black;
+    width: 100px;
+    flex-grow: 1;
+    /* cuando la caja flexbox tenga tamaño sobrante, es la habilidad o el factor de crecer,
+    valor por defecto es 0, NO se aceptan valores negativos */
+    flex-shrink: 1;
+    /* cuando la caja flexbox NO tenga tamaño sobrante, es la habilidad o el factor de encogerse,
+    valor por defecto es 1, NO se aceptan valores negativos */
+    flex-basis: auto;
+}
+
+.item:nth-child(2){
+    flex-grow: 3;
+}
+
+.item:nth-child(3){
+    flex-grow: 2;
+}
+
+
