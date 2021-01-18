@@ -1,0 +1,42 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+.container{
+    height: 30vh;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.item{
+    background-color: rebeccapurple;
+    border: medium solid black;
+    flex-grow: 0;
+    /* cuando la caja flexbox tenga tamaño sobrante, es la habilidad o el factor de crecer,
+    valor por defecto es 0, NO se aceptan valores negativos */
+    flex-shrink: 1;
+    /* cuando la caja flexbox NO tenga tamaño sobrante, es la habilidad o el factor de encogerse,
+    valor por defecto es 1, NO se aceptan valores negativos */
+    flex-basis: auto;
+}
+/* cada una mide 79.77 */
+/* 1- 79.77 - 5.06  = 74.71 */
+/* 2- 79.77 - (5.06*2) = 69.65*/
+/* 3- 79.77 - (5.06*2) = 69.65*/
+.item:nth-child(2){
+    flex-shrink: 2;
+}
+
+.item:nth-child(3){
+    flex-shrink: 2;
+}
+
+
